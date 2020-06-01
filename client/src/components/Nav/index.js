@@ -23,7 +23,11 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     backgroundColor: "grey",
     height: 80,
-    paddingTop: 10
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginTop: -8,
+    marginRight: -16,
+    marginLeft: -16
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -50,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 0,
     width: '100%',
+    paddingTop: 2,
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
       width: 'auto',
@@ -77,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    paddingTop: 10,
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
