@@ -1,31 +1,14 @@
 import React from "react";
 import { Col, Row, Container } from "../Grid";
 import { useAuth0 } from "../../react-auth0-spa"
+import ContentForm from '../ContentForm'
 // import { makeStyles } from '@material-ui/core/styles';
 // import './index.css';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//     '& > *': {
-//       margin: theme.spacing(1),
-//       width: theme.spacing(16),
-//       height: theme.spacing(16),
-//     },
-//   },
-// }));
 
-// const Background = (e)=>{
-//   const currentDate = e.target.value
-//     switch(){
-//       case currentDate = "January 1950"
-//     }
-// }
-
-function MainBody() {
+function MainBody({ info }) {
   // const classes = useStyles();
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated } = useAuth0();
 
   return (
     <Container fluid>
@@ -39,7 +22,7 @@ function MainBody() {
                 <h5 style={{ color: 'orange' }}>Title</h5>
               </div>
             </div>
-          </div>) : <></>}
+          </div>) : <ContentForm />}
 
 
         </Col>
