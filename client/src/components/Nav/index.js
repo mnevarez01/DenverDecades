@@ -91,20 +91,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  // hiddenHeader: {
-  //   display: "none",
-  //   textAlign: "center",
-  //   margin: "auto",
-  //   marginTop: 15,
-  //   marginBottom: 15,
-    
-  //   [theme.breakpoints.down('sm')]: {
-  //     display: "block"
-      
-      
-      
-  //   }
-  // }
   
 }));
 
@@ -137,7 +123,7 @@ export default function Nav() {
           </div>
         </Toolbar>
       </AppBar>
-      {/* <h2 className={classes.hiddenHeader}>Denver through the Decades</h2> */}
+      
     </div>
     
   );
