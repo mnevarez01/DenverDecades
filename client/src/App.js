@@ -5,11 +5,13 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/footer";
-import HiddenHeader from "./components/hiddenHeader";
+import HiddenHeader from "./components/HiddenHeader";
 import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
-import MainBody from "./components/MainBody"; 
+
+// CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
+import MainBody from "./components/MainBody";
 import './App.css';
 
 function App() {
@@ -18,14 +20,19 @@ function App() {
     <Router>
         <Nav />
         <HiddenHeader />
+
         <HeroBanner />
-        <Section />
-<HorizontalTimeline />
+
+        <HorizontalTimeline />
 
         <Section />
-      
+
+        <Section />
+
         <MainBody />
+
         <Switch>
+
           <Route exact path={["/", "/books"]}>
             <Books />
           </Route>
@@ -34,6 +41,7 @@ function App() {
           </Route>
           <Route>
             <NoMatch />
+
           </Route>
         </Switch>
         <Footer />

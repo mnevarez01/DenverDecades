@@ -618,26 +618,114 @@ db.Content
     process.exit(1);
   });
 
-  // db.Images
-  // .remove({})
-  // .then(() => db.Images.collection.insertMany(ImagesSeed))
-  // .then(data => {
-    // console.log(data.result.n + " records inserted!");
-    // process.exit(0);
-  // })
-  // .catch(err => {
-    // console.error(err);
-    // process.exit(1);
-  // });
-
-  // db.Edit
-  // .remove({})
-  // .then(() => db.Edit.collection.insertMany(EditSeed))
-  // .then(data => {
-    // console.log(data.result.n + " records inserted!");
-    // process.exit(0);
-  // })
-  // .catch(err => {
-    // console.error(err);
-    // process.exit(1);
-  // });
+  const ImageSeed = [
+    {
+      year: "1870",
+      image: "1870.jpg"
+    },
+    {
+      year: "1880",
+      image: "1880.jpg"
+    },
+    {
+      year: "1890",
+      image: "1890.jpg"
+    },
+    {
+      year: "1900",
+      image: "1900.png"
+    },
+    {
+      year: "1910",
+      image: "1910.png"
+    },
+    {
+      year: "1870",
+      image: "1870.jpg"
+    },
+    {
+      year: "1920",
+      image: "1920.jpg"
+    },
+    {
+      year: "1930",
+      image: "1930.jpg"
+    },
+    {
+      year: "1940",
+      image: "1940.jpg"
+    },
+    {
+      year: "1870",
+      image: "1870.jpg"
+    },
+    {
+      year: "1950",
+      image: "1950.jpg"
+    },
+    {
+      year: "1870",
+      image: "1870.jpg"
+    },
+    {
+      year: "1960",
+      image: "1870.jpg"
+    },
+    {
+      year: "1960",
+      image: "1870.jpg"
+    },
+    {
+      year: "1970",
+      image: "1970.jpg"
+    },
+    {
+      year: "1980",
+      image: "1980.jpg"
+    },
+    {
+      year: "1990",
+      image: "1990.jpg"
+    },
+    {
+      year: "2000",
+      image: "2000.jpg"
+    },
+    {
+      year: "2010",
+      image: "2010.jpg"
+    },
+    {
+      year: "2020",
+      image: "2020.jpg"
+    },
+  ];
+  db.Images
+  .remove({})  
+  .then(() => db.Images.collection.insertMany(ImageSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+  const EditSeed = [
+    {
+      content_id: "5ed405a903a586637cdad0f7",
+      userName: "Kim Tompkins",
+      date: new Date(Date.now())
+    }
+  ]; 
+  db.Edit
+  .remove({})
+  .then(() => db.Edit.collection.insertMany(EditSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });

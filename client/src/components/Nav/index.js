@@ -4,20 +4,19 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import  MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@material-ui/core/MenuItem';
 import MenuListComposition from '../burgerIcon.js';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-// import mobileHeader from '../mobileHeader.js'
-// import './index.css';
+import { useAuth0 } from '../../react-auth0-spa'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    
-    
+
+
   },
   appBar: {
     flexGrow: 1,
@@ -43,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       display: "none"
     }
-  
+
   },
- 
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -72,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
   },
   inputRoot: {
     color: 'inherit',
@@ -91,21 +90,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  // hiddenHeader: {
-  //   display: "none",
-  //   textAlign: "center",
-  //   margin: "auto",
-  //   marginTop: 15,
-  //   marginBottom: 15,
-    
-  //   [theme.breakpoints.down('sm')]: {
-  //     display: "block"
-      
-      
-      
-  //   }
-  // }
-  
+
 }));
 
 export default function Nav() {
@@ -117,7 +102,7 @@ export default function Nav() {
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuListComposition />
-              <MenuItem className={classes.burgerIcon}/>
+            <MenuItem className={classes.burgerIcon} />
           </IconButton>
           <Typography variant="h4" className={classes.title}>
             Denver through the Decades
@@ -137,9 +122,9 @@ export default function Nav() {
           </div>
         </Toolbar>
       </AppBar>
-      {/* <h2 className={classes.hiddenHeader}>Denver through the Decades</h2> */}
+
     </div>
-    
+
   );
 }
 
