@@ -6,7 +6,6 @@ import "./style.css"
 const VALUES = ['January 1950', 'January 1960', 'January 1970', "January 1980", " January 1990", 'January 2000', "January 2010", " January 2020"];//will be removed when data added
 
 
-
 export default class App extends React.Component {
   state = { value: 0, previous: 0 };
 
@@ -36,3 +35,4 @@ export default class App extends React.Component {
     );
   }
 }
+

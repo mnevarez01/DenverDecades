@@ -1,20 +1,19 @@
 import React from "react";
 import { Col, Row, Container } from "../Grid";
-import { makeStyles } from '@material-ui/core/styles';
-import { useAuth0 } from '../../react-auth0-spa'
-import './index.css';
+// import { makeStyles } from '@material-ui/core/styles';
+// import './index.css';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     '& > *': {
+//       margin: theme.spacing(1),
+//       width: theme.spacing(16),
+//       height: theme.spacing(16),
+//     },
+//   },
+// }));
 
 // const Background = (e)=>{
 //   const currentDate = e.target.value
@@ -24,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 function MainBody() {
-  const { isAuthenticated } = useAuth0();
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Container fluid>
