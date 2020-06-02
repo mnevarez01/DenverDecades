@@ -90,7 +90,7 @@ export default function MenuListComposition() {
                       Log in
                      </MenuItem>
                     <MenuItem
-                      onClick={() => loginWithRedirect({})}> Logout</MenuItem>
+                      onClick={() => logoutWithRedirect({})}> Logout</MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
