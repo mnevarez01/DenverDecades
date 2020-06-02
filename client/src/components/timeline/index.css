@@ -1,0 +1,14 @@
+.timelineDiv {
+    color: #383838 !important;
+    background-color: #ffffff !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  .dot-label {
+      font-size: 1.3rem;
+      color: #383838;
+  }
+  .resize-sensor {
+    opacity: 0;
+  }

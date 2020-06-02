@@ -1,0 +1,59 @@
+.Section {
+    align-items: center;
+    color: #8855FF;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .Section .SectionWrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    overflow: hidden;
+  }
+  
+  .Section .SectionWrapper {
+    margin: 3rem;
+    position: relative;
+    width: 40%;
+  }
+  
+  .Section .SectionWrapper {
+    width: 100%;
+  }
+  
+  .Section .SectionWrapper  {
+    margin: 3rem;
+    width: 60%;
+  }
+  
+  .Section .SectionWrapper .Header {
+    margin: 0 0 1rem 0;
+  }
+  
+  .Section .SectionWrapper {
+    margin: 0;
+  }
+  
+  @media (max-width: 599px) {
+    .Section {
+      font-size: 90%;
+    }
+  
+    .Section .SectionWrapper {
+      flex-wrap: wrap;
+    }
+  
+    .Section .SectionWrapper {
+      margin: 3rem 3rem 1.5rem 3rem;
+      width: 100%;
+    }
+  
+    .Section .SectionWrapper {
+      margin: 1.5rem 3rem 3rem 3rem;
+      width: 100%;
+    }
+  }

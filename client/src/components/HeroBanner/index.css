@@ -1,0 +1,113 @@
+.HeroBanner {
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .HeroBanner .HeroOverlay {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .HeroBanner .HeroWrapper {
+    height: 75%;
+    position: relative;
+    width: 75%;
+  }
+  
+  .HeroBanner .HeroWrapper.isCenter {
+    height: unset;
+  }
+  
+  .HeroBanner .HeroWrapper .TopCenterText {
+    padding: 10em 0 30em 0;
+    text-align: center;
+  }
+  
+  .HeroBanner .HeroWrapper .CenterText {
+    padding: 20em 0em;
+    text-align: center;
+  }
+  
+  .HeroBanner .HeroWrapper .BottomCenterText {
+    padding: 30em 0 10em 0;
+    text-align: center;
+  }
+  
+  .HeroBanner .HeroWrapper .TopLeftText {
+    padding: 10em 0 30em 0;
+    text-align: left;
+  }
+  
+  .HeroBanner .HeroWrapper .LeftText {
+    padding: 20em 0;
+    text-align: left;
+  }
+  
+  .HeroBanner .HeroWrapper .BottomLeftText {
+    padding: 30em 0 10em 0;
+    text-align: left;
+  }
+  
+  .HeroBanner .HeroWrapper .TopRightText {
+    padding: 10em 0 30em 0;
+    text-align: right;
+  }
+  
+  .HeroBanner .HeroWrapper .RightText {
+    padding: 20em 0;
+    text-align: right;
+  }
+  
+  .HeroBanner .HeroWrapper .BottomRightText {
+    padding: 30em 0 10em 0;
+    text-align: right;
+  }
+  
+  @media (max-width: 599px) {
+    .HeroBanner {
+      font-size: 90%;
+    }
+  
+    .HeroBanner .HeroWrapper .TopCenterText {
+      padding: 7em 0 21em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .CenterText {
+      padding: 14em 0em;
+    }
+    
+    .HeroBanner .HeroWrapper .BottomCenterText {
+      padding: 21em 0 7em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .TopLeftText {
+      padding: 7em 0 21em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .LeftText {
+      padding: 14em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .BottomLeftText {
+      padding: 21em 0 7em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .TopRightText {
+      padding: 7em 0 21em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .RightText {
+      padding: 14em 0;
+    }
+    
+    .HeroBanner .HeroWrapper .BottomRightText {
+      padding: 21em 0 7em 0;
+    }
+  }
