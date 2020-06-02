@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/footer";
-import HiddenHeader from "./components/hiddenHeader";
+import HiddenHeader from "./components/HiddenHeader";
 import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
 
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
-import MainBody from "./components/MainBody"; 
+import MainBody from "./components/MainBody";
 import './App.css';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <Section />
         <HorizontalTimeline />
         <Section />
-      
+
         <MainBody />
         <Switch>
           {/* <Route exact path={["/", "/books"]}>
