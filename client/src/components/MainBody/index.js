@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "../Grid";
+import { useAuth0 } from "../../react-auth0-spa"
 // import { makeStyles } from '@material-ui/core/styles';
 // import './index.css';
 
@@ -24,6 +25,7 @@ import { Col, Row, Container } from "../Grid";
 
 function MainBody() {
   // const classes = useStyles();
+  const { isAuthenticated } = useAuth0()
 
   return (
     <Container fluid>
