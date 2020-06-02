@@ -6,7 +6,6 @@ import "./style.css"
 const VALUES = ["1980", "1990", "2010", "2020"];//will be removed when data added
 
 
-
 export default class App extends React.Component {
   state = { value: 0, previous: 0, /*isLoading: true, books: [] */ };
 
@@ -45,3 +44,4 @@ export default class App extends React.Component {
     );
   }
 }
+

@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import Detail from "./pages/Detail";
+>>>>>>> master
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/footer";
@@ -16,23 +20,34 @@ import './App.css';
 
 function App() {
   return (
+    <div>
     <Router>
-      <div>
         <Nav />
         <HiddenHeader />
         <HeroBanner />
+<<<<<<< HEAD
         <Section />
         <HorizontalTimeline />
         <Section />
         <MainBody />
         <Switch>
+=======
+        <HorizontalTimeline />
+        <Section />
+        <Section />
+        <MainBody />
+        <Switch>
+          <Route exact path="/books/:id">
+            <Detail />
+          </Route>
+>>>>>>> master
           <Route>
             <NoMatch />
           </Route>
         </Switch>
         <Footer />
-      </div>
     </Router>
+    </div>
   );
 }
 
