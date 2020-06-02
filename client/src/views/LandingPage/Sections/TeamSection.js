@@ -7,18 +7,19 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 
 // core components
-import GridContainer from "/../../components/Grid/GridContainer.js";
-import GridItem from "/../../components/Grid/GridItem.js";
-import Button from "/../../components/CustomButtons/Button.js";
-import Card from "/../../components/Card/Card.js";
-import CardBody from "/../../components/Card/CardBody.js";
-import CardFooter from "/../../components/Card/CardFooter.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import Button from "../../Components/CustomButtons/Button";
+import Card from "../../Components/Card/Card";
+import CardBody from "../../Components/Card/CardBody";
+import CardFooter from "../../Components/Card/CardFooter";
 
-import styles from "/../assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
-import team1 from "/../../assets/img/bg.jpg";
-import team2 from "/../../assets/img/bg.jpg";
-import team3 from "/../../assets/img/bg.jpg";
+import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/teamStyle";
+
+import team1 from "../../../assets/img/bg.jpg";
+import team2 from "../../../assets/img/bg.jpg";
+import team3 from "../../../assets/img/bg.jpg";
 
 const useStyles = makeStyles(styles);
 

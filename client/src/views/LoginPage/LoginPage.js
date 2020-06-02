@@ -19,7 +19,7 @@ import CardHeader from "/../components/Card/CardHeader.js";
 import CardFooter from "/../components/Card/CardFooter.js";
 import CustomInput from "/../components/CustomInput/CustomInput.js";
 
-import styles from "/../../assets/jss/material-kit-react/views/loginPage.js";
+import styles from "../../assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "/../assets/img/bg.jpg";
 
@@ -27,7 +27,7 @@ const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function() {
+  setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
