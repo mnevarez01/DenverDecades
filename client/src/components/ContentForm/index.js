@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+// import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import MainBody from '../components/MainBody';
 
-function Books() {
+function ContentForm() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+//   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
-  useEffect(() => {
-    loadBooks()
-  }, [])
+//  Load all books and store them with setBooks
+//   useEffect(() => {
+//     loadBooks()
+//   }, [])
 
   // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
-      .then(res => 
-        setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+//   function loadBooks() {
+//     API.getBooks()
+//       .then(res => 
+//         setBooks(res.data)
+//       )
+//       .catch(err => console.log(err));
+//   };
 
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
@@ -40,7 +41,7 @@ function Books() {
         title: formObject.title,
         author: formObject.author,
         year: formObject.year,
-        content: formObject.synopsis
+        content: formObject.description,
       })
         .then(res => loadBooks())
         .catch(err => console.log(err));
@@ -48,11 +49,12 @@ function Books() {
   };
 
     return (
+    <MainBody>
       <Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Submit Historical Contributions or Edit Requests</h1>
+              <h1>Submit Historical Contributions </h1>
             </Jumbotron>
             <form>
               <Input
@@ -72,21 +74,21 @@ function Books() {
               />
               <TextArea
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="Description of Event (Optional)"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
+                onClick={handleFormSubmit}>
                 Submit
               </FormBtn>
             </form>
           </Col>
         </Row>
       </Container>
+    </MainBody>
     );
   }
 
   
-export default Books;
+export default ContentForm;
