@@ -1,37 +1,30 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+// import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import MainBody from '../components/MainBody';
 
-function Books() {
+function ContentForm() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+//   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
-  useEffect(() => {
-    loadBooks()
-  }, [])
+//  Load all books and store them with setBooks
+//   useEffect(() => {
+//     loadBooks()
+//   }, [])
 
   // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
-      .then(res => 
-        setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-  };
-
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
-      .catch(err => console.log(err));
-  }
+//   function loadBooks() {
+//     API.getBooks()
+//       .then(res => 
+//         setBooks(res.data)
+//       )
+//       .catch(err => console.log(err));
+//   };
 
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
@@ -47,7 +40,8 @@ function Books() {
       API.saveBook({
         title: formObject.title,
         author: formObject.author,
-        synopsis: formObject.synopsis
+        year: formObject.year,
+        content: formObject.description,
       })
         .then(res => loadBooks())
         .catch(err => console.log(err));
@@ -55,17 +49,23 @@ function Books() {
   };
 
     return (
+    <MainBody>
       <Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Submit Historical Contributions </h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
                 name="title"
                 placeholder="Title (required)"
+              />
+               <Input
+                onChange={handleInputChange}
+                name="year"
+                placeholder="Year of Event (required)"
               />
               <Input
                 onChange={handleInputChange}
@@ -74,42 +74,21 @@ function Books() {
               />
               <TextArea
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="Description of Event (Optional)"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
-                Submit Book
+                onClick={handleFormSubmit}>
+                Submit
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {books.length ? (
-              <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
         </Row>
       </Container>
+    </MainBody>
     );
   }
 
-
-export default Books;
+  
+export default ContentForm;
