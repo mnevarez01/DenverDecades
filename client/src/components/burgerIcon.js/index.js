@@ -7,7 +7,7 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
-// import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { useAuth0 } from "../../react-auth0-spa"
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,15 +18,22 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   button: {
-    
+
   }
- 
+
 }));
 
 export default function MenuListComposition() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
+  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+
+  const logoutWithRedirect = () =>
+    logout({
+      returnTo: window.location.origin
+    });
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -59,7 +66,7 @@ export default function MenuListComposition() {
 
   return (
     <div className={classes.root}>
-      
+
       <div>
         <Button
           ref={anchorRef}
@@ -67,7 +74,7 @@ export default function MenuListComposition() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-           <MenuIcon style={{fontSize: 40, paddingTop: 3}} />
+          <MenuIcon style={{ fontSize: 40, paddingTop: 3 }} />
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
@@ -78,9 +85,12 @@ export default function MenuListComposition() {
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}>Create Account</MenuItem>
-                    <MenuItem onClick={handleClose}>Login</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    <MenuItem
+                      onClick={() => loginWithRedirect({})}>
+                      Log in
+                     </MenuItem>
+                    <MenuItem
+                      onClick={() => logoutWithRedirect({})}> Logout</MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -88,7 +98,7 @@ export default function MenuListComposition() {
           )}
         </Popper>
       </div>
-    </div>
+    </div >
   );
 }
 
