@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 const imagesSchema = new Schema({
   year: { type: String, required: true },
-  imageLink: String,
-  date: { type: Date, default: Date.now }
+  image: String,
 });
 
 const Images = mongoose.model("Images", imagesSchema);
