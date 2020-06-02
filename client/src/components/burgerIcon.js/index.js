@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     marginRight: theme.spacing(2),
   },
+  button: {
+    
+  }
  
 }));
 
@@ -64,7 +67,7 @@ export default function MenuListComposition() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-           <MenuIcon />
+           <MenuIcon style={{fontSize: 40, paddingTop: 3}} />
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
