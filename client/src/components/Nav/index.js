@@ -11,6 +11,7 @@ import MenuListComposition from '../burgerIcon.js';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 // import mobileHeader from '../mobileHeader.js'
+// import './index.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     flexGrow: 1,
-    color: "black",
-    backgroundColor: "grey",
+    color: "white",
+    backgroundColor: "#303030",
     height: 80,
     paddingTop: 10,
     paddingBottom: 10,
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     textAlign: "center",
-    color: "black",
+    color: "white",
     [theme.breakpoints.down('sm')]: {
       display: "none"
     }
@@ -90,20 +91,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  // hiddenHeader: {
-  //   display: "none",
-  //   textAlign: "center",
-  //   margin: "auto",
-  //   marginTop: 15,
-  //   marginBottom: 15,
-    
-  //   [theme.breakpoints.down('sm')]: {
-  //     display: "block"
-      
-      
-      
-  //   }
-  // }
   
 }));
 
@@ -136,7 +123,7 @@ export default function Nav() {
           </div>
         </Toolbar>
       </AppBar>
-      {/* <h2 className={classes.hiddenHeader}>Denver through the Decades</h2> */}
+      
     </div>
     
   );
