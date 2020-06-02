@@ -3,23 +3,14 @@ import HorizontalTimeline from 'react-horizontal-timeline';
 import "./style.css"
 
 
-const VALUES = ["1980", "1990", "2010", "2020"];//will be removed when data added
+const VALUES = ['January 1950', 'January 1960', 'January 1970', "January 1980", " January 1990", 'January 2000', "January 2010", " January 2020"];//will be removed when data added
 
 
 export default class App extends React.Component {
-  state = { value: 0, previous: 0, /*isLoading: true, books: [] */ };
+  state = { value: 0, previous: 0 };
 
-  // componentDidMount() {
-
-  //     fetch('/api/books')
-  //         .then(response => response.json())
-  //         .then(data => {
-  //             this.setState({ books: data, isLoading: false });
-  //         });
-  // }
 
   render() {
-    if (this.state.isLoading) return <div />
     return (
       <div>
         <h6>Select the Decade</h6>
