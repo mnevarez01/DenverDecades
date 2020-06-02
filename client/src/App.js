@@ -20,13 +20,19 @@ function App() {
       <div>
         <Nav />
         <HiddenHeader />
+        
         <HeroBanner />
-        <Section />
+        
         <HorizontalTimeline />
+        
+        <Section /> 
+          
         <Section />
-      
+        
         <MainBody />
+        
         <Switch>
+        
           {/* <Route exact path={["/", "/books"]}>
             <Books />
           </Route>
@@ -35,6 +41,7 @@ function App() {
           </Route> */}
           <Route>
             <NoMatch />
+            
           </Route>
         </Switch>
         <Footer />
