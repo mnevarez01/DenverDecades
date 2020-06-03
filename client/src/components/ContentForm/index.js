@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../Jumbotron";
 import API from '../../utils/API';
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid";
-// import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../Form";
-// import MainBody from '../MainBody';
+
 
 function ContentForm() {
   // Setting our component's initial state
-  //   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
   const [displayStyle, setDisplayStyle] = useState({
     display : ""
   })
   
 
-//  Load all books and store them with setBooks
+//  Set the display state of the message that displays when an article is successfully added
   useEffect(() => {
     setDisplayStyle({ ...displayStyle, display: "none" })
   }, [])

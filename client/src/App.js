@@ -8,37 +8,40 @@ import HiddenHeader from "./components/HiddenHeader";
 import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
-import API from './utils/API'
-
-
+import ContentForm from "./components/ContentForm";
+import API from "./utils/API";
 
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
-import MainBody from "./components/MainBody"; 
-import './App.css';
+import MainBody from "./components/MainBody";
+import "./App.css";
 
 function App() {
-  const [info, setInfo] = useState([])
+  const [info, setInfo] = useState([]);
   const [decade, setDecade] = useState();
   useEffect(() => {
     const initDate = decade;
-    const endDate = decade + 9
+    const endDate = decade + 9;
 
     API.getContentDates(initDate, endDate)
-      .then(res => setInfo(res.data))
-      .catch(err => console.log(err))
-  }, [decade])
-
+      .then((res) => setInfo(res.data))
+      .catch((err) => console.log(err));
+  }, [decade]);
 
   return (
     <div>
       <Router>
         <Nav />
         <HiddenHeader />
-        <HeroBanner />
-        <HorizontalTimeline setDecade={setDecade} />
-        <Section />
-        <MainBody info={info} />
         <Switch>
+          <Route exact path="/edit">
+            <ContentForm />
+          </Route>
+          <Route path="/">
+            <HeroBanner />
+            <HorizontalTimeline setDecade={setDecade} />
+            <Section />
+            <MainBody info={info} />
+          </Route>
           <Route>
             <NoMatch />
           </Route>

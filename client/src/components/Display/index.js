@@ -1,7 +1,9 @@
 import React from 'react';
+import { useAuth0 } from "../../react-auth0-spa";
 
 function Display({ info }) {
   // console.log(props)
+  const { isAuthenticated } = useAuth0();
   return (
     <div className="container">
 
@@ -12,7 +14,11 @@ function Display({ info }) {
             <h5> <strong>{title}</strong></h5>
             <li>
               <strong>What Happened:</strong> {content}
-            </li>
+          
+              {/* <a href="/edit">Edit</a> -  <a href="/edit">Contribute</a> */}
+            {isAuthenticated ? (<><a href="/edit">Edit</a> -  <a href="/edit">Contribute</a></>) : null }
+      
+           </li>
           </ul>
         </div>
       ))}
