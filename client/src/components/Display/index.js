@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Timeline, Event } from "react-timeline-scribble"
+import image1850 from '../../Assets/Images/1870.jpg'
 
 function Display({ info }) {
   // console.log(props)
@@ -21,4 +22,3 @@ function Display({ info }) {
 }
 
 export default Display;
-
