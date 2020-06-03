@@ -16,8 +16,9 @@ function MainBody({ info }) {
       <Row>
         <Col size="md-10" xs="auto">
 
-          {/* {!isAuthenticated ? <Display info={info} /> : <ContentForm />} */}
+         
           <Display info={info} />
+     
 
 
         </Col>

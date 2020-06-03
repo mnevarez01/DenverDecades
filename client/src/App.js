@@ -9,15 +9,17 @@ import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
 import ContentForm from "./components/ContentForm";
+import EditForm from "./components/EditForm";
 import API from "./utils/API";
+
 
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
 import MainBody from "./components/MainBody";
-import "./App.css";
+import './App.css';
 
 function App() {
-  const [info, setInfo] = useState([]);
-  const [decade, setDecade] = useState();
+  const [info, setInfo] = useState([])
+  const [decade, setDecade] = useState(1850);
   useEffect(() => {
     const initDate = decade;
     const endDate = decade + 9;
@@ -33,8 +35,11 @@ function App() {
         <Nav />
         <HiddenHeader />
         <Switch>
-          <Route exact path="/edit">
+          <Route exact path="/contribute">
             <ContentForm />
+          </Route>
+          <Route exact path="/edit/:id">
+            <EditForm />
           </Route>
           <Route path="/">
             <HeroBanner />

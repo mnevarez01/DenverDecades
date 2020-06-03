@@ -5,15 +5,20 @@ export default {
   getContents: function () {
     return axios.get("/api/content");
   },
-  // Gets the book with the given id
+  // Gets the content with the given data parameters
   getContentDates: function (initDate, endDate) {
     return axios.get(`/api/content/range?start=${initDate}&end=${endDate}`);
   },
-  // Deletes the book with the given id
+  // Gets content with the givin id parameter
+
+  getContent: function(id) {
+  return axios.get("/api/content/" + id);
+  },
+  // Deletes the content with the given id
   deleteContent: function (id) {
     return axios.delete("/api/content/" + id);
   },
-  // Saves a book to the database
+  // Saves a content to the database
   saveContent: function (dateData) {
     return axios.post("/api/content", dateData);
   },
