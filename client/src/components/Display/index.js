@@ -22,4 +22,3 @@ function Display({ info }) {
 }
 
 export default Display;
-
