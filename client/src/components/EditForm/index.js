@@ -4,6 +4,7 @@ import Jumbotron from "../Jumbotron";
 import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
+import './index.css';
 
 
 function EditForm() {
@@ -79,7 +80,7 @@ function EditForm() {
           <Col size="md-6">
             <Jumbotron>
               <h1>Edit Historical Contributions </h1>
-              <h2 style={{display: displayStyle.display}}>Your article has been edited</h2>
+              <h2>style={{display: displayStyle.display}}>Your article has been edited</h2>
              
             </Jumbotron>
             <form>
@@ -110,7 +111,7 @@ function EditForm() {
               </FormBtn>
             </form>
           </Col>
-        </Row>
+            </Row>
       </Container>
    
     );

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#ffffff",
     fontSize: 40,
-    fontFamily: "News Cycle",
+    fontFamily: "Codystar",
     
 
     [theme.breakpoints.down('sm')]: {
