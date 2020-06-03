@@ -1,10 +1,15 @@
 .timeline {
+<<<<<<< HEAD
+    font-size: 20px;
+=======
     
     font-size: 20px;
     background: white;
+>>>>>>> master
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color:lightgray;
+    background-color:#5C6672;
+    
     
 }
 
@@ -12,4 +17,5 @@ h6 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 35px;
 }

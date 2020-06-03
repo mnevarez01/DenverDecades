@@ -12,6 +12,7 @@ import API from './utils/API'
 
 
 
+
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
 import MainBody from "./components/MainBody";
 import './App.css';

@@ -1,7 +1,17 @@
 .footer {
-    background-color: grey;
+    background-color: #5C6672;
     text-align: center;
     margin-top: 20px;
-    padding-top: 16px;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
+    
+}
+.p1 {
+    font-size: 30px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+.p2 {
+    font-size: 18px;
+    margin-bottom: 6px;
 }
