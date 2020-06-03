@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Timeline, Event } from "react-timeline-scribble"
+import "./style.css"
 
 function Display({ info }) {
   // console.log(props)

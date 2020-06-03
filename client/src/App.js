@@ -37,7 +37,7 @@ function App() {
         <HiddenHeader />
         <HeroBanner />
         <HorizontalTimeline setDecade={setDecade} />
-        <Section />
+        {/* <Section /> */}
         <MainBody info={info} />
         <Switch>
           <Route>

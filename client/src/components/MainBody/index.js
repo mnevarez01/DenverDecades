@@ -13,14 +13,14 @@ function MainBody({ info }) {
 
   return (
     <Container fluid>
-      <Row>
-        <Col size="md-10" xs="auto">
+      {/* <Row>
+        <Col size="md-10" xs="auto" > */}
 
           {!isAuthenticated ? <Display info={info} /> : <ContentForm />}
 
 
-        </Col>
-      </Row>
+        {/* </Col>
+      </Row> */}
     </Container>
   );
 }
