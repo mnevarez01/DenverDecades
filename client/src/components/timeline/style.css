@@ -1,10 +1,10 @@
 .timeline {
-    
     font-size: 20px;
-    background: white;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     background-color:#5C6672;
+    
+    
     
     
 }
@@ -14,4 +14,17 @@ h6 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 35px;
+}
+
+.text-center {
+    font-size: 20px;
+    color: white;
+    
+    
+    
+}
+.decade {
+    margin-bottom: 0px;
+    font-size: 30px;
+    color: #000000
 }

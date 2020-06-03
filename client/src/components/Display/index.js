@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Timeline, Event } from "react-timeline-scribble"
-import image1850 from '../../Assets/Images/1870.jpg'
+import "./style.css"
 
 function Display({ info }) {
   // console.log(props)

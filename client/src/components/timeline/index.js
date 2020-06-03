@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
           <div style={{ width: '80%', height: '100px', margin: "0 auto" }}>
             <HorizontalTimeline
-              styles={{ background: '#d3d3d3', foreground: '#E67A16', outline: '#808080' }}
+              styles={{ background: '#5C6672', foreground: '#E67A16', outline: '#000000' }}
               index={this.state.value}
               indexClick={(index) => {
                 this.setState({ value: index, previous: this.state.value },
@@ -32,9 +32,11 @@ export default class App extends React.Component {
           </div>
           <div className='text-center'>
             {/* any arbitrary component can go here */}
+            {/* <p className="decade">User Selected:</p> */}
             {VALUES[this.state.value].substring(VALUES[this.state.value].length - 4)}
           </div>
         </div>
+        
       </div>
     );
   }
