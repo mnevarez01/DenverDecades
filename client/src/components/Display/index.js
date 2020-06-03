@@ -5,11 +5,10 @@ function Display({ info }) {
   // console.log(props)
   return (
     <div className="container">
-
-      {info.map(({ content, title, year, _id, author }) => (
-        <Fragment>
+      {info.map(({ content, title, year, _id }) => (
+        <Fragment >
           <Timeline >
-            <Event key={_id} interval={year} title={title} subtitle={author}>
+            <Event key={_id} interval={year} title={title} >
               {content}
             </Event>
           </Timeline>
@@ -23,12 +22,3 @@ function Display({ info }) {
 
 export default Display;
 
-// {/* <div classNames="container">
-//           <h3>Year: {year}</h3>
-//           <ul className="list-group" key={_id}>
-//             <h5> <strong>{title}</strong></h5>
-//             <li>
-//               <strong>What Happened:</strong> {content}
-//             </li>
-//           </ul>
-//         </div> */}
