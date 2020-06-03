@@ -5,11 +5,11 @@ import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 // import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../Form";
-
+// import MainBody from '../MainBody';
 
 function ContentForm() {
   // Setting our component's initial state
-   const [content, setContent] = useState([])
+  //   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
   const [displayStyle, setDisplayStyle] = useState({
     display : ""
@@ -38,7 +38,7 @@ function ContentForm() {
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   };
 
   
@@ -78,7 +78,7 @@ function ContentForm() {
                 name="title"
                 placeholder="Title (required)"
               />
-               <Input
+              <Input
                 onChange={handleInputChange}
                 name="year"
                 placeholder="Year of Event (required)"
@@ -95,7 +95,7 @@ function ContentForm() {
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}>
+              >
                 Submit
               </FormBtn>
             </form>
@@ -106,5 +106,4 @@ function ContentForm() {
     );
   }
 
-  
 export default ContentForm;

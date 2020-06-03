@@ -1,39 +1,21 @@
 import React from "react";
 import { Col, Row, Container } from "../Grid";
 import { useAuth0 } from "../../react-auth0-spa"
-import ContentForm from "../ContentForm";
-
+import ContentForm from '../ContentForm'
+import Display from '../Display'
 // import { makeStyles } from '@material-ui/core/styles';
 // import './index.css';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//     '& > *': {
-//       margin: theme.spacing(1),
-//       width: theme.spacing(16),
-//       height: theme.spacing(16),
-//     },
-//   },
-// }));
 
-// const Background = (e)=>{
-//   const currentDate = e.target.value
-//     switch(){
-//       case currentDate = "January 1950"
-//     }
-// }
-
-function MainBody() {
+function MainBody({ info }) {
   // const classes = useStyles();
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated } = useAuth0();
 
   return (
     <Container fluid>
       <Row>
         <Col size="md-10" xs="auto">
-          {isAuthenticated ? (<div class="row mb-5">
+          {!isAuthenticated ? (<div class="row mb-5">
             <div class="col-lg-8 mx-auto">
               <div class="bg-white p-5 rounded shadow col-centered">
 
@@ -42,6 +24,7 @@ function MainBody() {
               </div>
             </div>
           </div>) : <ContentForm />}
+          {!isAuthenticated ? <Display info={info} /> : <ContentForm />}
 
 
         </Col>
