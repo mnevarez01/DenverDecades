@@ -13,12 +13,12 @@ import API from './utils/API'
 
 
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
-import MainBody from "./components/MainBody"; 
+import MainBody from "./components/MainBody";
 import './App.css';
 
 function App() {
   const [info, setInfo] = useState([])
-  const [decade, setDecade] = useState();
+  const [decade, setDecade] = useState(1850);
   useEffect(() => {
     const initDate = decade;
     const endDate = decade + 9
