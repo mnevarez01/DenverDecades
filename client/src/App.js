@@ -9,6 +9,7 @@ import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
 import API from './utils/API'
+import image1850 from '../src/Assets/Images/1870.jpg'
 
 
 
@@ -31,14 +32,13 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{ backgroundImage: { image1850 } }}>
       <Router>
         <Nav />
         <HiddenHeader />
         <HeroBanner />
         <HorizontalTimeline setDecade={setDecade} />
-        <Section />
-        <MainBody info={info} />
+        <MainBody decade={decade} info={info} />
         <Switch>
           <Route>
             <NoMatch />

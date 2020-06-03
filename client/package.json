@@ -13,11 +13,7 @@
     "react-horizontal-timeline": "^1.5.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.1",
-<<<<<<< HEAD
-    "react-vertical-timeline-component": "^3.0.0"
-=======
     "react-timeline-scribble": "^1.0.14"
->>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
