@@ -11,7 +11,8 @@
     "react-dom": "^16.13.1",
     "react-horizontal-timeline": "^1.5.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "react-vertical-timeline-component": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

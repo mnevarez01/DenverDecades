@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
         margin: "auto",
         marginTop: 15,
         marginBottom: 15,
+        fontSize: 40,
+        paddingTop: 50,
         
         [theme.breakpoints.down('sm')]: {
           display: "block"

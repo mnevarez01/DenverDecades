@@ -21,14 +21,18 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     flexGrow: 1,
-    color: "white",
-    backgroundColor: "#303030",
+    color: "#000000",
+    backgroundColor: "#5C6672",
     height: 80,
     paddingTop: 10,
     paddingBottom: 10,
     marginTop: -8,
     marginRight: -16,
-    marginLeft: -16
+    marginLeft: -16,
+    marginBottom: -8,
+    position: "fixed",
+    top: 0,
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -39,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     textAlign: "center",
-    color: "white",
+    color: "#ffffff",
+    fontSize: 40,
+    fontFamily: "News Cycle",
+    
+
     [theme.breakpoints.down('sm')]: {
       display: "none"
     }
@@ -55,13 +63,14 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 0,
     width: '100%',
-    paddingTop: 2,
+    
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
     [theme.breakpoints.down('sm')]: {
-      width: "100%"
+      width: "100%",
+      
     }
   },
   searchIcon: {
