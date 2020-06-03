@@ -10,8 +10,10 @@ import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";
 import API from './utils/API'
 
+
+
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
-import MainBody from "./components/MainBody";
+import MainBody from "./components/MainBody"; 
 import './App.css';
 
 function App() {
@@ -35,12 +37,8 @@ function App() {
         <HeroBanner />
         <HorizontalTimeline setDecade={setDecade} />
         <Section />
-        <Section />
         <MainBody info={info} />
         <Switch>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
           <Route>
             <NoMatch />
           </Route>
