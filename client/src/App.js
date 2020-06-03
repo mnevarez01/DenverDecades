@@ -12,7 +12,6 @@ import ContentForm from "./components/ContentForm";
 import EditForm from "./components/EditForm";
 import API from "./utils/API";
 
-
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
 import MainBody from "./components/MainBody";
 import './App.css';
@@ -30,10 +29,13 @@ function App() {
   }, [decade]);
 
   return (
-    <div>
+    <div style={{ backgroundImage: { image1850 } }}>
       <Router>
         <Nav />
         <HiddenHeader />
+        <HeroBanner />
+        <HorizontalTimeline setDecade={setDecade} />
+        <MainBody decade={decade} info={info} />
         <Switch>
           <Route exact path="/contribute">
             <ContentForm />

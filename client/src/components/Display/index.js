@@ -2,6 +2,7 @@ import React, { Fragment} from 'react';
 import { Timeline, Event } from "react-timeline-scribble"
 import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
+import "./style.css"
 
 function Display({ info }) {
   // console.log(props)
@@ -25,4 +26,3 @@ function Display({ info }) {
 }
 
 export default Display;
-

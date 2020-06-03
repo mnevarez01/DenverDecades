@@ -1,6 +1,7 @@
 body {
-background-color: #ffd8d8;
+/* background-color: #ffd8d8; */
 background-image: linear-gradient(0deg, #ffd8d8 0%,#ca3403 50%, #303030 200%);
+/* background-image: url('../src/Assets/Images/1870.jpg'); */
 color: white;
   font-family: Arial;
   text-align: center;
