@@ -14,10 +14,10 @@ import API from "./utils/API";
 
 // CAN WE HAVE A COMPONENT (vertical timeline) IN ANOTHER COMPONENT (container)
 import MainBody from "./components/MainBody";
-import './App.css';
+import "./App.css";
 
 function App() {
-  const [info, setInfo] = useState([])
+  const [info, setInfo] = useState([]);
   const [decade, setDecade] = useState(1850);
   useEffect(() => {
     const initDate = decade;
@@ -29,33 +29,26 @@ function App() {
   }, [decade]);
 
   return (
-    <div style={{ backgroundImage: { image1850 } }}>
-      <Router>
-        <Nav />
-        <HiddenHeader />
-        <HeroBanner />
-        <HorizontalTimeline setDecade={setDecade} />
-        <MainBody decade={decade} info={info} />
-        <Switch>
-          <Route exact path="/contribute">
-            <ContentForm />
-          </Route>
-          <Route exact path="/edit/:id">
-            <EditForm />
-          </Route>
-          <Route path="/">
-            <HeroBanner />
-            <HorizontalTimeline setDecade={setDecade} />
-            <Section />
-            <MainBody info={info} />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/contribute">
+          <ContentForm />
+        </Route>
+        <Route exact path="/edit/:id">
+          <EditForm />
+        </Route>
+        <Route path="/">
+          <HeroBanner />
+          <HorizontalTimeline setDecade={setDecade} />
+          <MainBody decade={decade} info={info} />
+        </Route>
+        <Route>
+          <NoMatch />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
