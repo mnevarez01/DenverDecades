@@ -49,12 +49,20 @@ function ContentForm() {
    
       <Container fluid>
         <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Submit Historical Contributions </h1>
+        <Col size="md-10">
+          <div class="row border-0 my-4">
+    <div class="col-lg-8 mx-auto">
+     <br />
+     <br />
+     <br />
+      <div class="historical p-4 rounded shadow">
+              <h1 className='h1'>Edit Historical Contributions</h1>
               <h2 style={{display: displayStyle.display}}>Your article has been added</h2>
-             
-            </Jumbotron>
+              </div></div></div>
+            <div class="row border-0 my-4">
+    <div class="col-lg-8 mx-auto">
+  
+      <div class="bg-white p-4 rounded shadow">
             <form>
               <Input
                 onChange={handleInputChange}
@@ -82,10 +90,11 @@ function ContentForm() {
                 Submit
               </FormBtn>
             </form>
+            <br />
+            </div></div></div>
           </Col>
-        </Row>
+            </Row>
       </Container>
-   
     );
   }
 
