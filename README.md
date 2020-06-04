@@ -14,10 +14,15 @@
 
 ## Description
 
-This simple app will let you focus on your fitness by tracking you workouts. You can complete and create new ones to see your progress. Using simple the simple Mongo and Mongoose application to create a user friendly app.
+An application using ReactJs, Mongoose, Express to create a historical application for those in the Denver Area. You will be able to navigate and learn what happened through the decades. You can also log in and add content and update the content as you see fit.
 
 ## Installation
 
+This application does involve Reactjs. You will need to run an 
+
+* npm i * 
+
+to be able to get the application running on your local repo.
 
 
 ## Contributors
@@ -27,7 +32,10 @@ Kim Tompkins, Vanessa Pham, Andrew Werner
 
 * [Express](https://www.npmjs.com/package/express)
 * [Mongoose](https://www.npmjs.com/package/mongoose)
+* [React]()
+* [material-ui/core](https://www.npmjs.com/package/@material-ui/core)
 * [React](https://www.npmjs.com/package/morgan)
+
 
 ## License
 
