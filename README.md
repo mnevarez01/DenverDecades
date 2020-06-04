@@ -13,6 +13,8 @@
 ## Deployed site
 [Denver Through the Decades](https://ancient-mountain-15840.herokuapp.com/)
 
+![DenverDecades](client/public/Images/DenverDecades.gif)
+
 
 
 ## User Story
