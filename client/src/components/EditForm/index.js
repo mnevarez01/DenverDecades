@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import Jumbotron from "../Jumbotron";
 import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
+import './index.css';
 
 
 function EditForm() {
@@ -57,6 +57,7 @@ function EditForm() {
     }
   };
 
+
   return (
 
     <Container fluid>
@@ -102,5 +103,6 @@ function EditForm() {
 
   );
 }
+
 
 export default EditForm;
