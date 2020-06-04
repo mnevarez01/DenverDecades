@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
@@ -43,18 +43,18 @@ function EditForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    
-      API.updateContent(id, {
-        title: content.title,
-        author: content.author,
-        year: content.year,
-        content: content.description,
-      })
-        .then(
-          setDisplayStyle({ ...displayStyle, display: "block" })
-        )
-        .catch(err => console.log(err));
-    
+
+    API.updateContent(id, {
+      title: content.title,
+      author: content.author,
+      year: content.year,
+      content: content.description,
+    })
+      .then(
+        setDisplayStyle({ ...displayStyle, display: "block" })
+      )
+      .catch(err => console.log(err));
+
   };
 
 
@@ -64,52 +64,52 @@ function EditForm() {
       <Row>
         <Col size="md-10">
 
-        <div class="row border-0 my-4">
-    <div class="col-lg-8 mx-auto">
-     <br />
-     <br />
-     <br />
-      <div class="historical p-4 rounded shadow">
-              <h1 className='h1'>Edit Historical Contributions</h1>
-              <h2 style={{display: displayStyle.display}}>Your article has been edited</h2>
-            </div></div></div>
-            <div class="row border-0 my-4">
-    <div class="col-lg-8 mx-auto">
-      <div class="bg-white p-4 rounded shadow">
-          <form onSubmit={handleFormSubmit}>
-            <Input
-              onChange={(e) => setContent({ title: e.target.value })}
-              name="title"
-              value={content.title}
+          <div class="row border-0 my-4">
+            <div class="col-lg-8 mx-auto">
+              <br />
+              <br />
+              <br />
+              <div class="historical p-4 rounded shadow">
+                <h1 className='h1'>Edit Historical Contributions</h1>
+                <h2 style={{ display: displayStyle.display }}>Your article has been edited</h2>
+              </div></div></div>
+          <div class="row border-0 my-4">
+            <div class="col-lg-8 mx-auto">
+              <div class="bg-white p-4 rounded shadow">
+                <form onSubmit={handleFormSubmit}>
+                  <Input
+                    onChange={(e) => setContent({ title: e.target.value })}
+                    name="title"
+                    value={content.title}
 
-            />
-            <Input
-              onChange={(e) => setContent({ year: e.target.value })}
-              name="year"
-              value={content.year}
-            />
-            <Input
-              onChange={(e) => setContent({ author: e.target.value })}
-              name="author"
-              value={content.author}
+                  />
+                  <Input
+                    onChange={(e) => setContent({ year: e.target.value })}
+                    name="year"
+                    value={content.year}
+                  />
+                  <Input
+                    onChange={(e) => setContent({ author: e.target.value })}
+                    name="author"
+                    value={content.author}
 
-            />
-            <TextArea
-              onChange={(e) => setContent({ content: e.target.value })}
-              name="description"
-              value={content.content}
-            />
-            <FormBtn
-              type="submit"
-            >
-              Submit It
+                  />
+                  <TextArea
+                    onChange={(e) => setContent({ content: e.target.value })}
+                    name="description"
+                    value={content.content}
+                  />
+                  <FormBtn
+                    type="submit"
+                  >
+                    Submit It
               </FormBtn>
-          </form>
-          <br />
-            </div></div></div>
-          </Col>
-            </Row>
-      </Container>
+                </form>
+                <br />
+              </div></div></div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

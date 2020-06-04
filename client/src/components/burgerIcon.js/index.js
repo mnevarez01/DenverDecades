@@ -27,7 +27,7 @@ export default function MenuListComposition() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { loginWithRedirect, logout } = useAuth0();
 
 
   const logoutWithRedirect = () =>

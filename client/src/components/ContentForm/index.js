@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Jumbotron from "../Jumbotron";
 import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
