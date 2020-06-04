@@ -8,112 +8,99 @@ import { Input, TextArea, FormBtn } from "../Form";
 
 function EditForm() {
   // Setting our component's initial state
-  const [formObject, setFormObject] = useState({})
-  const [content, setContent] = useState([])
+
+  const [content, setContent] = useState({
+    title: "",
+    author: "",
+    content: "",
+    date: ""
+  })
   const [displayStyle, setDisplayStyle] = useState({
-    display : ""
+    display: ""
   })
   const { id } = useParams();
-  
 
-//  Set the display state of the message that displays when an article is successfully added
+
+  //  Set the display state of the message that displays when an article is successfully added
   useEffect(() => {
     loadContent();
     setDisplayStyle({ ...displayStyle, display: "none" })
   }, [])
 
   function loadContent() {
-    console.log(id)
+
     API.getContent(id)
       .then(res => {
         console.log(res.data)
         setContent(res.data)
-        
+
       })
       .catch(err => console.log(err));
   };
-  
 
-  
-  // Loads all books and sets them to books
-//   function loadBooks() {
-//     API.getBooks()
-//       .then(res => 
-//         setBooks(res.data)
-//       )
-//       .catch(err => console.log(err)); 
-//   };
 
-  // Handles updating component state when the user types into the input field
 
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value })
-  };
 
-  
-  
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
-
-      API.saveContent({
-        title: formObject.title,
-        author: formObject.author,
-        year: formObject.year,
-        content: formObject.description,
+    if (content.title && content.author) {
+      API.updateContent(id, {
+        title: content.title,
+        author: content.author,
+        year: content.year,
+        content: content.description,
       })
-
-        .then(//res => loadContent() 
-        setDisplayStyle({ ...displayStyle, display: "block" })
-        
+        .then(
+          setDisplayStyle({ ...displayStyle, display: "block" })
         )
         .catch(err => console.log(err));
     }
   };
 
-    return (
-   
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Edit Historical Contributions </h1>
-              <h2 style={{display: displayStyle.display}}>Your article has been edited</h2>
-             
-            </Jumbotron>
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="year"
-                placeholder="Year of Event (required)"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                onChange={handleInputChange}
-                name="description"
-                placeholder="Description of Event (Optional)"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-              >
-                Submit
+  return (
+
+    <Container fluid>
+      <Row>
+        <Col size="md-6">
+          <Jumbotron>
+            <h1>Edit Historical Contributions </h1>
+            <h2 style={{ display: displayStyle.display }}>Your article has been edited</h2>
+
+          </Jumbotron>
+          <form onSubmit={handleFormSubmit}>
+            <Input
+              onChange={(e) => setContent({ title: e.target.value })}
+              name="title"
+              value={content.title}
+
+            />
+            <Input
+              onChange={(e) => setContent({ year: e.target.value })}
+              name="year"
+              value={content.year}
+            />
+            <Input
+              onChange={(e) => setContent({ author: e.target.value })}
+              name="author"
+              value={content.author}
+
+            />
+            <TextArea
+              onChange={(e) => setContent({ content: e.target.value })}
+              name="description"
+              value={content.content}
+            />
+            <FormBtn
+              type="submit"
+            >
+              Submit It
               </FormBtn>
-            </form>
-          </Col>
-        </Row>
-      </Container>
-   
-    );
-  }
+          </form>
+        </Col>
+      </Row>
+    </Container>
+
+  );
+}
 
 export default EditForm;

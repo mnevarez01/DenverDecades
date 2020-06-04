@@ -78,7 +78,8 @@ function ContentForm() {
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
-              >
+                onClick={handleFormSubmit}
+>
                 Submit
               </FormBtn>
             </form>
