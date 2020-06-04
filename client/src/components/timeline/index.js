@@ -13,7 +13,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h6>Select the Decade</h6>
+        <div className="decadeHeader">
+          <h6>Select the Decade</h6>
+        </div>
+        
         <div className="timeline">
           {/* Bounding box for the Timeline */}
 
@@ -33,7 +36,7 @@ export default class App extends React.Component {
           <div className='text-center'>
             {/* any arbitrary component can go here */}
             {/* <p className="decade">User Selected:</p> */}
-            {VALUES[this.state.value].substring(VALUES[this.state.value].length - 4)}
+            {/* {VALUES[this.state.value].substring(VALUES[this.state.value].length - 4)} */}
           </div>
         </div>
         

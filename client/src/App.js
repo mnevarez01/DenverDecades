@@ -29,6 +29,7 @@ function App() {
   return (
     <Router>
       <Nav />
+      <HiddenHeader />
       <Switch>
         <Route exact path="/contribute">
           <ContentForm />
@@ -38,7 +39,6 @@ function App() {
         </Route>
         <Route path="/">
           <HeroBanner />
-          <HiddenHeader />
           <HorizontalTimeline setDecade={setDecade} />
           <MainBody decade={decade} info={info} />
         </Route>
