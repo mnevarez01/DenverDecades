@@ -4,6 +4,9 @@ import API from '../../utils/API';
 import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import './index.css';
+import ArrowBack from '@material-ui/icons/KeyboardBackspace';
+import { Button,} from '@material-ui/core';
+import { Link } from "react-router-dom";
 
 
 function EditForm() {
@@ -63,12 +66,8 @@ function EditForm() {
     <Container fluid>
       <Row>
         <Col size="md-10">
-
-          <div class="row border-0 my-4">
+          <div class="row border-0 my-2">
             <div class="col-lg-8 mx-auto">
-              <br />
-              <br />
-              <br />
               <div class="historical p-4 rounded shadow">
                 <h1 className='h1'>Edit Historical Contributions</h1>
                 <h2 style={{ display: displayStyle.display }}>Your article has been edited</h2>
@@ -105,6 +104,7 @@ function EditForm() {
                     Submit It
               </FormBtn>
                 </form>
+                <Button component={Link} to="/" color="black"><ArrowBack/></Button>
                 <br />
               </div></div></div>
         </Col>
@@ -112,6 +112,5 @@ function EditForm() {
     </Container>
   );
 }
-
 
 export default EditForm;
