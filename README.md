@@ -50,6 +50,12 @@ Kim Tompkins, Vanessa Pham, Andrew Werner
 * [Axios](https://www.npmjs.com/package/axios)
 * [Auth0](https://www.npmjs.com/package/auth0)
 
+## Database Information 
+
+Our information was gathered from Denver historical sites as well as Wikipedia. A link for all our information is below:
+
+[GoogleDoc](https://docs.google.com/document/d/1mVBUclGq9G25-d3uPH-QxhdmS5a0nWbW60CAPKn2QRQ/edit)
+
 
 ## License
 
