@@ -29,5 +29,17 @@
 } */
 
 body{
-  background-image: url('../../Assets/Images/1870.jpg');
+  /* background-image: url('../../Assets/Images/1870.jpg'); */
+  
 }
+
+.row{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.bg-dark {
+  opacity: .9;
+  background-color: #455561 !important;
+  min-height: 400px;
+}
+

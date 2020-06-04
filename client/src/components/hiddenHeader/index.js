@@ -10,9 +10,11 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         margin: "auto",
         marginTop: 15,
-        marginBottom: 15,
+        marginBottom: 0,
         fontSize: 40,
         paddingTop: 50,
+        backgroundColor: "#ca3403",
+        paddingBottom: 15,
         
         [theme.breakpoints.down('sm')]: {
           display: "block"

@@ -31,6 +31,7 @@ function App() {
   return (
     <Router>
       <Nav />
+      <HiddenHeader />
       <Switch>
         <Route exact path="/contribute">
           <ContentForm />
