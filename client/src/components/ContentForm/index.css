@@ -1,0 +1,16 @@
+.ContentForm {
+    text-align: center;
+    font-family: Georgia, serif;
+    margin-top: 20px;
+ }
+ 
+ .historical {
+   font-family: Georgia, serif;
+   background-image: linear-gradient(0deg,#ca3403 50%, #303030 200%);
+   text-align: center;
+ }
+ 
+ .h1 {
+   font-family: Georgia, serif;
+   text-align: center;
+ }
