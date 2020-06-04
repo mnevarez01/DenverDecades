@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/footer";
 import HiddenHeader from "./components/HiddenHeader";
 import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
-import Section from "./components/Section";
 import ContentForm from "./components/ContentForm";
 import EditForm from "./components/EditForm";
 import API from "./utils/API";
