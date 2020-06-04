@@ -4,7 +4,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/footer";
-import HiddenHeader from "./components/HiddenHeader";
+// import HiddenHeader from "./components/HiddenHeader";
 import HorizontalTimeline from "./components/timeline";
 import HeroBanner from "./components/HeroBanner";
 import Section from "./components/Section";

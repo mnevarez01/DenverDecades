@@ -18,8 +18,8 @@ function MainBody({ info, decade }) {
       <div class="row border-0 my-4">
         <div class="col-lg-8 mx-auto">
           <div class="bg-dark p-4 rounded shadow" >
-      <Display info={info} />
-      </div></div></div>
+            <Display info={info} />
+          </div></div></div>
 
     </Container>
   );

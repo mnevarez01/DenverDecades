@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuListComposition from '../burgerIcon.js';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import { useAuth0 } from '../../react-auth0-spa'
+// import { useAuth0 } from '../../react-auth0-spa'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: -8,
     position: "fixed",
     top: 0,
-    
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#ffffff",
     fontSize: 40,
     fontFamily: "News Cycle",
-    
+
 
     [theme.breakpoints.down('sm')]: {
       display: "none"
@@ -62,14 +62,14 @@ const useStyles = makeStyles((theme) => ({
     },
     marginLeft: 0,
     width: '100%',
-    
+
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
     [theme.breakpoints.down('sm')]: {
       width: "100%",
-      
+
     }
   },
   searchIcon: {
