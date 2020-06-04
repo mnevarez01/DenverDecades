@@ -43,7 +43,7 @@ function EditForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (content.title && content.author) {
+    
       API.updateContent(id, {
         title: content.title,
         author: content.author,
@@ -54,7 +54,7 @@ function EditForm() {
           setDisplayStyle({ ...displayStyle, display: "block" })
         )
         .catch(err => console.log(err));
-    }
+    
   };
 
 
@@ -62,12 +62,20 @@ function EditForm() {
 
     <Container fluid>
       <Row>
-        <Col size="md-6">
-          <Jumbotron>
-            <h1>Edit Historical Contributions </h1>
-            <h2 style={{ display: displayStyle.display }}>Your article has been edited</h2>
+        <Col size="md-10">
 
-          </Jumbotron>
+        <div class="row border-0 my-4">
+    <div class="col-lg-8 mx-auto">
+     <br />
+     <br />
+     <br />
+      <div class="historical p-4 rounded shadow">
+              <h1 className='h1'>Edit Historical Contributions</h1>
+              <h2 style={{display: displayStyle.display}}>Your article has been edited</h2>
+            </div></div></div>
+            <div class="row border-0 my-4">
+    <div class="col-lg-8 mx-auto">
+      <div class="bg-white p-4 rounded shadow">
           <form onSubmit={handleFormSubmit}>
             <Input
               onChange={(e) => setContent({ title: e.target.value })}
@@ -97,10 +105,11 @@ function EditForm() {
               Submit It
               </FormBtn>
           </form>
-        </Col>
-      </Row>
-    </Container>
-
+          <br />
+            </div></div></div>
+          </Col>
+            </Row>
+      </Container>
   );
 }
 
