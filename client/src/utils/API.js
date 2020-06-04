@@ -22,4 +22,8 @@ export default {
   saveContent: function (dateData) {
     return axios.post("/api/content", dateData);
   },
+  // Saves a content to the database
+  updateContent: function (id,res) {
+  return axios.put("/api/content/" + id,res);
+},
 };

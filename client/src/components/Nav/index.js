@@ -10,7 +10,6 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#ffffff",
     fontSize: 40,
-    fontFamily: "News Cycle",
+    fontFamily: "Codystar",
 
 
     [theme.breakpoints.down('sm')]: {
