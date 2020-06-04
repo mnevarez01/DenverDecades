@@ -43,6 +43,10 @@ Kim Tompkins, Vanessa Pham, Andrew Werner
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 * [React]()
 * [material-ui/core](https://www.npmjs.com/package/@material-ui/core)
+* [react-timeline-scribble](https://www.npmjs.com/package/react-timeline-scribble)
+* [react-horizontal-timeline](https://www.npmjs.com/package/react-horizontal-timeline)
+* [material-ui](https://material-ui.com/)
+* [Bootstrap](https://getbootstrap.com/)
 * [Axios](https://www.npmjs.com/package/axios)
 * [Auth0](https://www.npmjs.com/package/auth0)
 
