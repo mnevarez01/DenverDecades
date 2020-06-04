@@ -4,12 +4,11 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuListComposition from '../burgerIcon.js';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-// import { useAuth0 } from '../../react-auth0-spa'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -109,10 +108,8 @@ export default function Nav() {
     <div className="navbar" >
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuListComposition />
-            <MenuItem className={classes.burgerIcon} />
-          </IconButton>
+          <MenuListComposition />
+          <MenuItem className={classes.burgerIcon} />
           <Typography variant="h4" className={classes.title}>
             Denver through the Decades
           </Typography>
