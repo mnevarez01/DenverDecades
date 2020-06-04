@@ -9,7 +9,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuListComposition from '../burgerIcon.js';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-// import { useAuth0 } from '../../react-auth0-spa'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: "#ffffff",
     fontSize: 40,
-    fontFamily: "News Cycle",
+    fontFamily: "Codystar",
 
 
     [theme.breakpoints.down('sm')]: {
