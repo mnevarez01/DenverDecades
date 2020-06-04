@@ -3,13 +3,22 @@
 ![Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=9cf)
 
 ### Table of Contents:
+* [User Story](##-User-Story)
 * [Description](##-Description)
 * [Installation](##-Installation)
 * [Credits](##-Credits)
+* [Contributors](##-Contributors)
 * [License](##-License)
 
-## User Story
+## Deployed site
+[Denver Through the Decades](https://ancient-mountain-15840.herokuapp.com/)
 
+
+
+## User Story
+I am new to Denver and would like to learn about the history of this city.
+
+I am well versed in the history of Denver, I can log into this site and add as well as edit information so that other can learn. 
 
 
 ## Description
