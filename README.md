@@ -34,7 +34,8 @@ Kim Tompkins, Vanessa Pham, Andrew Werner
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 * [React]()
 * [material-ui/core](https://www.npmjs.com/package/@material-ui/core)
-* [React](https://www.npmjs.com/package/morgan)
+* [Axios](https://www.npmjs.com/package/axios)
+* [Auth0](https://www.npmjs.com/package/auth0)
 
 
 ## License
