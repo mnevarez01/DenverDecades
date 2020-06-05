@@ -51,7 +51,7 @@ function EditForm() {
       title: content.title,
       author: content.author,
       year: content.year,
-      content: content.description,
+      content: content.content,
     })
       .then(
         setDisplayStyle({ ...displayStyle, display: "block" })
@@ -104,7 +104,7 @@ function EditForm() {
                     Submit It
               </FormBtn>
                 </form>
-                <Button component={Link} to="/" color="black"><ArrowBack/></Button>
+                {/* <Button component={Link} to="/" color="black"><ArrowBack/></Button> */}
                 <br />
               </div></div></div>
         </Col>
