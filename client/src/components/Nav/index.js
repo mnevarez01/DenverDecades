@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -100,8 +100,14 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function Nav() {
+export default function Nav({ setSearchTerm }) {
   const classes = useStyles();
+ const [term,setTerm] = useState("")
+ 
+ function handleInputChange(event){
+   setTerm(event.target.value)
+
+ }
 
   return (
     <div className="navbar" >
@@ -112,19 +118,26 @@ export default function Nav() {
           <Typography variant="h4" className={classes.title}>
             Denver through the Decades
           </Typography>
+        <form onSubmit={(e) => {e.preventDefault();setSearchTerm(term)}}>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
+
             <InputBase
               placeholder="Search Year"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              value={term}
+              onChange={handleInputChange}
+             
               inputProps={{ 'aria-label': 'search' }}
+             
             />
           </div>
+          </form>
         </Toolbar>
       </AppBar>
 

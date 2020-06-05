@@ -5,13 +5,21 @@ module.exports = {
   findAll: function(req, res) {
     db.Content
       .find(req.query)
-      .sort({ date: -1 })
+      .sort({ year: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByRange: function(req, res) {
     db.Content
       .find({ year: {$gte: req.query.start, $lte: req.query.end}})
+      .sort({ year: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByDate: function(req, res) {
+    
+    db.Content
+      .find({ year: req.params.year})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

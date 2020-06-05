@@ -12,6 +12,11 @@ router.route("/")
   .route("/range")
   .get(contentController.findByRange);
 
+  //api/content/search?start=1990
+  router
+  .route("/search/:year")
+  .get(contentController.findByDate);
+
 // Matches with "/api/content/:id"
 router
   .route("/:id")
