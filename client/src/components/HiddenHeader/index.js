@@ -1,5 +1,6 @@
 import React from './node_modules/react';
-import { makeStyles } from './node_modules/@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,7 +29,7 @@ export default function HiddenHeader() {
   const classes = useStyles();
   return (
     <div>
-      <h2 className={classes.HiddenHeader}>Denver through the Decades</h2>
+      <h2 className={classes.hiddenHeader}>Denver through the Decades</h2>
     </div>
 
   )
