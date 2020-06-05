@@ -26,7 +26,7 @@ function ContentForm() {
 
 
   function handleFormSubmit(event) {
-    console.log('here')
+ 
     event.preventDefault();
     if (formObject.title && formObject.author) {
 

@@ -9,6 +9,10 @@ export default {
   getContentDates: function (initDate, endDate) {
     return axios.get(`/api/content/range?start=${initDate}&end=${endDate}`);
   },
+   // Gets the content with the given data parameters
+ getContentSearch: function (initDate) {
+  return axios.get(`/api/content/search/${initDate}`);
+},
   // Gets content with the givin id parameter
 
   getContent: function(id) {
