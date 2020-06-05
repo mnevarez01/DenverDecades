@@ -51,7 +51,7 @@ function EditForm() {
       title: content.title,
       author: content.author,
       year: content.year,
-      content: content.description,
+      content: content.content,
     })
       .then(
         setDisplayStyle({ ...displayStyle, display: "block" })
