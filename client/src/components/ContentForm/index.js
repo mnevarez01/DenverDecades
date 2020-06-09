@@ -5,7 +5,7 @@ import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import './index.css';
 import ArrowBack from '@material-ui/icons/KeyboardBackspace';
-import { Button,} from '@material-ui/core';
+import { Button, } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 
@@ -55,9 +55,9 @@ function ContentForm() {
       <Row>
         <Col size="md-10">
           <div class="row border-0 my-2">
-            <div class="col-lg-8 mx-auto">    
-             <div class="historical p-4 rounded shadow">
-               <h1 className='h1'>Submit Historical Contributions</h1>
+            <div class="col-lg-8 mx-auto">
+              <div class="historical p-4 rounded shadow">
+                <h1 className='h1'>Submit Historical Contributions</h1>
                 <h2 style={{ display: displayStyle.display }}>Your article has been added</h2>
               </div></div></div>
           <div class="row border-0 ">
@@ -92,7 +92,7 @@ function ContentForm() {
                     Submit
               </FormBtn>
                 </form>
-                <Button component={Link} to="/" color="black"><ArrowBack/></Button>
+                <Button component={Link} to="/" color="black"><ArrowBack /></Button>
                 <br />
               </div></div></div>
         </Col>

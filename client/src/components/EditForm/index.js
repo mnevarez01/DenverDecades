@@ -5,7 +5,7 @@ import { Col, Row, Container } from "../Grid";
 import { Input, TextArea, FormBtn } from "../Form";
 import './index.css';
 import ArrowBack from '@material-ui/icons/KeyboardBackspace';
-import { Button,} from '@material-ui/core';
+import { Button, } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 
@@ -104,7 +104,7 @@ function EditForm() {
                     Submit It
               </FormBtn>
                 </form>
-                <Button component={Link} to="/" color="black"><ArrowBack/></Button>
+                <Button component={Link} to="/" color="black"><ArrowBack /></Button>
                 <br />
               </div></div></div>
         </Col>
