@@ -65,7 +65,7 @@ function EditForm() {
 
     <Container fluid>
       <Row>
-        <Col size="md-10">
+        <Col size="md-12">
           <div class="row border-0 my-2">
             <div class="col-lg-8 mx-auto">
               <div class="historical p-4 rounded shadow">
@@ -104,9 +104,11 @@ function EditForm() {
                     Submit It
               </FormBtn>
                 </form>
-                <Button component={Link} to="/" color="black"><ArrowBack /></Button>
+                <Button className="hoverBtn" component={Link} to="/" ><ArrowBack /> Home Page</Button>
                 <br />
-              </div></div></div>
+              </div>
+            </div>
+          </div>
         </Col>
       </Row>
     </Container>

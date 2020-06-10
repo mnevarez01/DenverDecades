@@ -31,7 +31,7 @@ function ContentForm() {
 
 
   function handleFormSubmit(event) {
- 
+
     event.preventDefault();
     if (formObject.title && formObject.author) {
 
@@ -53,13 +53,15 @@ function ContentForm() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-10">
+        <Col size="md-12">
           <div class="row border-0 my-2">
             <div class="col-lg-8 mx-auto">
               <div class="historical p-4 rounded shadow">
                 <h1 className='h1'>Submit Historical Contributions</h1>
                 <h2 style={{ display: displayStyle.display }}>Your article has been added</h2>
-              </div></div></div>
+              </div>
+            </div>
+          </div>
           <div class="row border-0 ">
             <div class="col-lg-8 mx-auto">
               <div class="bg-white p-4 rounded shadow">
@@ -92,9 +94,11 @@ function ContentForm() {
                     Submit
               </FormBtn>
                 </form>
-                <Button component={Link} to="/" color="black"><ArrowBack /></Button>
+                <Button className="hoverBtn" component={Link} to="/" color="black" ><ArrowBack />Home Page</Button>
                 <br />
-              </div></div></div>
+              </div>
+            </div>
+          </div>
         </Col>
       </Row>
     </Container>
