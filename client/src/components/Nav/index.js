@@ -30,7 +30,11 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
 
+
+
   },
+
+
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -100,6 +104,8 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+
+
 export default function Nav({ setSearchTerm }) {
   const classes = useStyles();
   const [term, setTerm] = useState("")
@@ -108,8 +114,6 @@ export default function Nav({ setSearchTerm }) {
   function handleInputChange(event) {
     event.preventDefault();
     setTerm(event.target.value)
-
-
   }
 
 
@@ -148,6 +152,5 @@ export default function Nav({ setSearchTerm }) {
     </div>
 
   );
-}
 
-
+};

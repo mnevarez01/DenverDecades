@@ -5,3 +5,15 @@
     
 
 }
+
+.homeHoverBtn {
+    padding: 0px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+.homeHoverBtn:hover {
+    
+    color: #ca3403;
+}
+
