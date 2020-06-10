@@ -29,8 +29,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: -8,
     position: "fixed",
     top: 0,
+    
+
 
   },
+
+ 
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -100,6 +104,8 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+
+
 export default function Nav({ setSearchTerm }) {
   const classes = useStyles();
  const [term,setTerm] = useState("")
@@ -108,6 +114,9 @@ export default function Nav({ setSearchTerm }) {
    setTerm(event.target.value)
 
  }
+ 
+ 
+ 
 
   return (
     <div className="navbar" >

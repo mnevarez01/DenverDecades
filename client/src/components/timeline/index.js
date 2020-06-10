@@ -14,7 +14,8 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="decadeHeader">
-          <h6>Select the Decade</h6>
+          <h6 className="selectDecade">Select the Decade</h6>
+          <h7 className="userGuide">(Login to Edit/Contribute)</h7>
         </div>
         
         <div className="timeline">

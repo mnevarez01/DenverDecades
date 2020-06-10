@@ -18,7 +18,8 @@ function Display({ info }) {
            {/* if there is content then display it.  if not display message */}
 
              {content}
-              {isAuthenticated ? (<><Link to={"/edit/" + _id}>Edit</Link> - <Link to="/contribute">Contribute</Link></>) : null}
+             <br></br>
+              {isAuthenticated ? (<><Link className="homeHoverBtn" to={"/edit/" + _id}>Edit</Link> - <Link to="/contribute" className="homeHoverBtn">Contribute</Link></>) : null}
             </Event>
           </Timeline>
         </Fragment>
