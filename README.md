@@ -11,7 +11,7 @@
 * [License](##-License)
 
 ## Deployed site
-[Denver Through the Decades](https://ancient-mountain-15840.herokuapp.com/)
+[Denver Through the Decades](https://denverdecades.herokuapp.com/)
 
 ![DenverDecades](client/public/Images/DenverDecades.gif)
 
