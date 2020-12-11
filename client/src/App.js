@@ -18,7 +18,7 @@ function App() {
   const [info, setInfo] = useState([]);
   const [decade, setDecade] = useState(1850);
   const [searchTerm, setSearchTerm] = useState([]);
-  useEffect(() => { 
+  useEffect(() => {
     const initDate = decade;
     const endDate = decade + 9;
 
@@ -27,16 +27,17 @@ function App() {
       .catch((err) => console.log(err));
   }, [decade]);
 
- if (searchTerm.length > 0){
-  API.getContentSearch(searchTerm)
-  .then((res) => setInfo(res.data),
-  setSearchTerm([])
-  )
-  .catch((err) => console.log(err));}
+  if (searchTerm.length > 0) {
+    API.getContentSearch(searchTerm)
+      .then((res) => setInfo(res.data),
+        setSearchTerm([])
+      )
+      .catch((err) => console.log(err));
+  }
 
   return (
     <Router>
-      <Nav setSearchTerm={setSearchTerm}/>
+      <Nav setSearchTerm={setSearchTerm} />
       <HiddenHeader />
       <Switch>
         <Route exact path="/contribute">
